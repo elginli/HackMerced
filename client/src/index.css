@@ -1,6 +1,11 @@
 body{
+<<<<<<< HEAD
     background-color: #42d7f5;
     color: white;
+=======
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+>>>>>>> 8f46f328d5f9e978132bb20b09fd51df415abc75
     margin: 0%;
     padding: 0%;
 }
