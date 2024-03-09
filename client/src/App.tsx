@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
+import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           {/* Add Routes Here */}
         </Routes>
       </BrowserRouter>
+     
+      
     </>
   );
 }

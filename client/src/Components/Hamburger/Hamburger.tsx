@@ -20,7 +20,7 @@ export default function Hamburger() {
                     <li className="hamburger button"><a className="hamburger link" href="./Home">Help</a></li>
                 </ul>
             </div >
-            <div id="google_translate_element"></div>
+            
 
         </>
     );
