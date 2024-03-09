@@ -1,0 +1,12 @@
+button {
+  background-color: blue; /* Set button background color to blue */
+  color: white; /* Set text color to white */
+  padding: 10px 20px; /* Add padding to the button */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add border radius to create rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+  background-color: darkblue; /* Darken button background color on hover */
+}
