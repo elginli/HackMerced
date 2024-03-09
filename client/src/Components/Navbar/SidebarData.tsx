@@ -19,20 +19,21 @@ export const SidebarData = [
   },
   {
     title: 'Reminders',
-    path: '/products',
+    path: '/Remind',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
     title: 'Add Medication',
-    path: '/team',
+    path: '/Add',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
   {
     title: 'Settings',
-    path: '/messages',
+    path: '/Settings',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
-  }
+  },
+ 
 ];
