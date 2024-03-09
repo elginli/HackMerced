@@ -9,16 +9,16 @@ export default function Hamburger() {
         <>
             <div className="hamburger nav">
                 <ul className="hamburger buttons">
+                    <div className="hamburger menu" onClick={() => { setActiveMenu(!activeMenu) }}>
+                        <div className="lines"></div>
+                        <div className="lines"></div>
+                        <div className="lines"></div>
+                    </div>
                     <li className="hamburger button"><a className="hamburger link" href="./Home">Hello</a></li>
                     <li className="hamburger button"><a className="hamburger link" href="./Home">Animal</a></li>
                     <li className="hamburger button"><a className="hamburger link" href="./Home">People</a></li>
                     <li className="hamburger button"><a className="hamburger link" href="./Home">Help</a></li>
                 </ul>
-                <div className={`${activeMenu ? "hamburger-active" : "hamburger-inactive"}`} onClick={() => { setActiveMenu(!activeMenu) }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div >
         </>
     );
