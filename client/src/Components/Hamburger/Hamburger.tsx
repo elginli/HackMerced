@@ -8,7 +8,7 @@ export default function Hamburger() {
     return (
         <>
             <div className="hamburger nav">
-                <ul className="hamburger buttons">
+                <ul className={`hamburger buttons`}>
                     <div className="hamburger menu" onClick={() => { setActiveMenu(!activeMenu) }}>
                         <div className="lines"></div>
                         <div className="lines"></div>
