@@ -6,6 +6,7 @@ import QuestionForm from '../../Components/QuestionForm/QuestionForm';
 import ResponseDisplay from '../../Components/ResponseDisplay/ResponseDisplay';
 import Reminder from "../../Components/Reminder/Reminder";
 import './Home.css';
+import BasicCalendar from "../../Components/BasicCalendar/BasicCalendar";
 
 export default function Home() {
 
@@ -27,9 +28,12 @@ export default function Home() {
 
 
         <Reminder />
-
+        
         {/* Add additional sections or links as needed */}
       </div>
+      <div className="Z" style={{height:"95vh"}}>
+        <BasicCalendar data={[]}/>
+        </div>
     </>
   );
 };

@@ -45,6 +45,8 @@
     right: 0;
     transition: 350ms;
     color:black;
+  
+    z-index: 2;
   }
   
   .nav-text {
@@ -94,3 +96,16 @@
     margin-left: 16px;
     color:black;
   }
+ .Navbar button {
+  text-decoration: none;
+    color: black;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    color:black;
+  }
+  

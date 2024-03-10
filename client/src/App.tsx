@@ -21,18 +21,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-<<<<<<< HEAD
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="Login" element={<Login />} />
-          <Route path="DrugUsage" element={<DrugUsage />} />
-
-          {/* Add Routes Here */}
-        </Routes>
-      </BrowserRouter>
-
-
-=======
         <Routes>    
           <Route path="/Home" element={<> <Home /> <Logout/></>} />
           {currentForm === 'login' && <Route path="*" element={<Login onFormSwitch={toggleForm} />} />}
@@ -44,7 +32,6 @@ function App() {
           {/* Add Routes Here */}
         </Routes>
       </BrowserRouter>
->>>>>>> refs/remotes/origin/main
     </>
   );
 }

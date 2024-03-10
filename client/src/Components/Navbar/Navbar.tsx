@@ -40,6 +40,7 @@ function Navbar() {
                 </li>
               );
             })}
+            <li><button>Logout</button></li>
           </ul>
         </nav>
         </div>
