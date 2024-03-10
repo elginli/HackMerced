@@ -11,15 +11,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="Login" element={<Login />} />
           <Route path="DrugUsage" element={<DrugUsage />} />
-          
+
           {/* Add Routes Here */}
         </Routes>
       </BrowserRouter>
-     
-      
+
+
     </>
   );
 }
