@@ -14,7 +14,8 @@ root.render(
     domain="dev-xo2t3urnf411ozm0.us.auth0.com" 
     clientId="18pwbDRgJaFWrqqyv7TbzOvSBkFlZ1zx"
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      //audience: 'http://localhost:3000',
   }}
   >
     <App />
