@@ -7,7 +7,7 @@ import * as RiIcons from 'react-icons/ri';
 export const SidebarData = [
   {
     title: 'Home',
-    path: '/',
+    path: '/Home',
     icon: <AiIcons.AiFillHome color="black"/>,
     cName: 'nav-text'
   },
@@ -16,12 +16,6 @@ export const SidebarData = [
     path: '/DrugInfo',
     icon: <FaIcons.FaSearch color="black" />,
     
-    cName: 'nav-text'
-  },
-  {
-    title: 'Reminders',
-    path: '/Remind',
-    icon: <FaIcons.FaCalendarCheck color="black"/>,
     cName: 'nav-text'
   },
   {

@@ -17,7 +17,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
       <div className="Navbar">
         <div className='Navbar navbar'>
-            <div id="google_translate_element"></div>
+        <div id="google_translate_element"></div>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
@@ -40,7 +40,7 @@ function Navbar() {
                 </li>
               );
             })}
-            <li><button>Logout</button></li>
+  
           </ul>
         </nav>
         </div>

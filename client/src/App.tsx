@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Logout from './Pages/Logout/Logout';
 import Profile from './Pages/Profile';
 import DrugUsage from'./Pages/DrugUsage/DrugUsage';
+import DrugInfo from'./Pages/DrugInfo/DrugInfo';
 import Routine from'./Pages/Routine/Routine';
 import Naloxone from'./Pages/Naloxone/Naloxone';
 import './App.css';
@@ -12,20 +13,23 @@ import { Register } from "./Pages/Login/Register";
 import { Login } from "./Pages/Login/LoginPage";
 
 function App() {
+
   const[currentForm, setCurrentForm] = useState('login')
 
   const toggleForm = (formName: string) =>{
     setCurrentForm(formName)
   }
- 
   return (
     <>
       <BrowserRouter>
         <Routes>    
-          <Route path="/Home" element={<> <Home /> <Logout/></>} />
-          {currentForm === 'login' && <Route path="*" element={<Login onFormSwitch={toggleForm} />} />}
+        <Route path="/" element={<Login onFormSwitch={toggleForm} />} />
+          <Route path="/Home" element={<Home />} />
+          {currentForm === 'login' && <Route path="/login" element={<Login onFormSwitch={toggleForm} />} />}
           {currentForm === 'register' && <Route path="/login" element={<Register onFormSwitch={toggleForm} />} />}
+          
           <Route path="/DrugUsage" element={<DrugUsage />} />
+          <Route path="/DrugInfo" element={<DrugInfo />} />
           <Route path ="/profile" element={<Profile />} />
           <Route path="Routine" element={<Routine />} />
           <Route path="Naloxone" element={<Naloxone />} />
