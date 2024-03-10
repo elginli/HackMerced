@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <Navbar />
 
       <div className="Home">
-        <h1>Welcome to RemindRX</h1>
+        <h1>Welcome to RxPlanation</h1>
 
         <p>
           Take control of your health with our personalized medication reminder app. We provide

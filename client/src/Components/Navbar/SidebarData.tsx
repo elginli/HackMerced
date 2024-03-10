@@ -7,32 +7,32 @@ export const SidebarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiFillHome color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Drug Info Search',
     path: '/DrugInfo',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <IoIcons.IoIosPaper color="black" />,
     
     cName: 'nav-text'
   },
   {
     title: 'Reminders',
     path: '/Remind',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FaIcons.FaCartPlus color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Drug Usage',
     path: '/DrugUsage',
-    icon: <IoIcons.IoMdPeople />,
+    icon: <IoIcons.IoMdPeople color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Settings',
     path: '/Settings',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <FaIcons.FaEnvelopeOpenText color="black"/>,
     cName: 'nav-text'
   },
  
