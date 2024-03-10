@@ -1,23 +1,14 @@
-import React, {useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
-import DrugUsage from './Pages/DrugUsage/DrugUsage';
+import Logout from './Pages/Logout/Logout';
+import Profile from './Pages/Profile';
+import DrugUsage from'./Pages/DrugUsage/DrugUsage';
 import './App.css';
 
 function App() {
-  const [backendData, setBackendData] = useState([{}])
-  useEffect(() => {
-    fetch("api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
 
-    )
-  }, [])
   return (
     <>
       <BrowserRouter>
