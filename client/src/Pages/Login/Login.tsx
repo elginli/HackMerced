@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
+
 import './Login.css';
 
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+ 
 
-  const handleLogin = () => {
-    loginWithRedirect({
-      appState: { target: '/Home' } // Customize the target URL
-    });
-  };
-
-  return <button onClick={handleLogin}>Log In</button>;
+  return(
+<></>
+  );
 };
 
 export default LoginButton;
