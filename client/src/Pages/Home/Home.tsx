@@ -6,20 +6,32 @@ import Reminder from "../../Components/Reminder/Reminder";
 import axios from 'axios';
 import QuestionForm from '../../Components/QuestionForm/QuestionForm';
 import ResponseDisplay from '../../Components/ResponseDisplay/ResponseDisplay';
-import Reminder from "../../Components/Reminder/Reminder";
-import './Home.css';
+import BasicCalendar from "../../Components/BasicCalendar/BasicCalendar";
 
-export default function Home() {
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('/users');
-      console.log(response.data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
+const Home: React.FC = () => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/users');
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
-  }
-
+    // Sample event data
+    const eventData = [
+      {
+        start: new Date("2024-03-18T10:00:00"),
+        end: new Date("2024-03-28T11:00:00"),
+        title: "Tylenol",
+      },
+      {
+        start: new Date("2024-03-18T14:00:00"),
+        end: new Date("2025-03-18T15:30:00"),
+        title: "Metformin",
+      },
+    ];
+  
+    
   return (
     <>
       <Navbar />
@@ -29,9 +41,14 @@ export default function Home() {
 
 
         <Reminder />
-
+        
         {/* Add additional sections or links as needed */}
       </div>
+      <div className="Z" style={{height:"95vh"}}>
+        <BasicCalendar data={eventData}/>
+        </div>
     </>
   );
 };
+
+export default Home
