@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
+
 import './DrugUsage.css';
 import Navbar from "../../Components/Navbar/Navbar";
 
@@ -35,6 +35,8 @@ import Navbar from "../../Components/Navbar/Navbar";
         <h2>Further Tips</h2>
         <p>When a doctor prescribes medicine, discuss available formats and express any preferences.  You can also consult your pharmacist.</p>
 
+        <h2>All Info from NHS</h2>
+        <a href="https://www.gosh.nhs.uk/conditions-and-treatments/medicines-information/types-medicines/">https://www.gosh.nhs.uk/conditions-and-treatments/medicines-information/types-medicines/</a>
     </div>
         </>
 

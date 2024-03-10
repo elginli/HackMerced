@@ -1,0 +1,19 @@
+.Naloxone.container {
+    width: 70%; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Naloxone h1 {
+    text-align: center;
+} 
+
+.Naloxone ol { 
+    list-style-type: decimal; 
+    margin-left: 30px;
+}
+
+.Naloxone ul { 
+    list-style-type: disc;
+    margin-left: 30px;
+}

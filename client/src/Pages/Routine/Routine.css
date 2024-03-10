@@ -1,0 +1,14 @@
+.Routine.container {
+    width: 70%; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* Adjust text alignment if preferred */
+}
+
+.Routine h1 {
+    text-align: center;
+}
+
+.Routine ul, ol {
+    margin-left: 30px;
+} 

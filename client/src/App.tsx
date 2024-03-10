@@ -5,6 +5,8 @@ import Navbar from './Components/Navbar/Navbar';
 import Logout from './Pages/Logout/Logout';
 import Profile from './Pages/Profile';
 import DrugUsage from'./Pages/DrugUsage/DrugUsage';
+import Routine from'./Pages/Routine/Routine';
+import Naloxone from'./Pages/Naloxone/Naloxone';
 import './App.css';
 
 function App() {
@@ -14,8 +16,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Home />} />
-          <Route path="Login" element={<Login />} />
           <Route path="DrugUsage" element={<DrugUsage />} />
+          <Route path="Routine" element={<Routine />} />
+          <Route path="Naloxone" element={<Naloxone />} />
           
           {/* Add Routes Here */}
         </Routes>
