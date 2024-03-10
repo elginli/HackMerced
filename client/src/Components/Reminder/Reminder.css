@@ -67,13 +67,27 @@
   }
   
   .Reminder input[type="checkbox"] {
-    width: 20px; /* Adjust the width for a larger checkbox */
-    height: 20px; /* Adjust the height for a larger checkbox */
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
   }
   
-  /* New class for fade-out transition */
-  .fade-out {
+  .Reminder .fade-out {
     opacity: 0 !important;
   }
+  
+  /* Additional styles for the days-section */
+  .Reminder .days-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .Reminder .days-section label {
+    flex-grow: 1;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Adjust the spacing or add other styles as needed */
   
