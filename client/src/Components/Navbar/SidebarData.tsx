@@ -2,37 +2,37 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
-
+import * as CiIcons from 'react-icons/ci';
 export const SidebarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiFillHome color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Drug Info Search',
     path: '/DrugInfo',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <FaIcons.FaSearch color="black" />,
     
     cName: 'nav-text'
   },
   {
     title: 'Reminders',
     path: '/Remind',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FaIcons.FaCalendarCheck color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Drug Usage',
     path: '/DrugUsage',
-    icon: <IoIcons.IoMdPeople />,
+    icon: <CiIcons.CiPill color="black"/>,
     cName: 'nav-text'
   },
   {
     title: 'Settings',
     path: '/Settings',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <IoIcons.IoMdSettings  color="black"/>,
     cName: 'nav-text'
   },
  
