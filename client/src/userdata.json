@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+          "name": "John Doe",
+          "credentials":
+            {
+                "email": "john.doe@example.com", 
+                "password": "fjdla"
+            }
+        },
+        {
+          "name": "Jane Smith",
+          "credentials":
+            {
+                "email": "jane.smith@example.com", 
+                "password": "fjdla"
+            }
+        },
+        {
+          "name": "Bob Johnson",
+          "credentials":
+            {
+                "email": "bob.johnson@example.com", 
+                "password": "fjdla"
+            }
+        }
+    ]
+}
