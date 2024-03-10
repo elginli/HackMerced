@@ -1,9 +1,8 @@
 #google_translate_element{
-    left: 2rem;
-    padding:0 20px ;
-    size:5px;
-    font-size:12px;
-  
+    right: 2rem;
+    left: 0;
+    padding: 10px;
+  background-color: #060b26;
     
 }
 

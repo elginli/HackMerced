@@ -12,13 +12,6 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Drug Info Search',
-    path: '/DrugInfo',
-    icon: <FaIcons.FaSearch color="black" />,
-    
-    cName: 'nav-text'
-  },
-  {
     title: 'Drug Usage',
     path: '/DrugUsage',
     icon: <CiIcons.CiPill color="black"/>,
