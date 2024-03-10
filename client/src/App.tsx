@@ -5,6 +5,7 @@ import Login from './Pages/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Logout from './Pages/Logout/Logout';
 import Profile from './Pages/Profile';
+import DrugUsage from'./Pages/DrugUsage/DrugUsage';
 import './App.css';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="Login" element={<Login />} />
+          <Route path="DrugUsage" element={<DrugUsage />} />
+          
           {/* Add Routes Here */}
         </Routes>
       </BrowserRouter>
