@@ -1,19 +1,51 @@
-.Naloxone.container {
-    width: 70%; 
+.Naloxone {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .Naloxone h1 {
-    text-align: center;
-} 
-
-.Naloxone ol { 
-    list-style-type: decimal; 
-    margin-left: 30px;
+    color: #333;
+    font-size: 2.8em;
+    margin-bottom: 20px;
 }
 
-.Naloxone ul { 
-    list-style-type: disc;
-    margin-left: 30px;
+.Naloxone h2 {
+    color: #4c51af;
+    font-size: 2em;
+    margin-top: 20px;
 }
+
+.Naloxone p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.Naloxone ul,
+.Naloxone ol {
+    list-style: none;
+    padding: 0;
+}
+
+.Naloxone li {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.Naloxone a {
+    color: #4c51af;
+    text-decoration: none;
+}
+
+.Naloxone a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the spacing or add other styles as needed */

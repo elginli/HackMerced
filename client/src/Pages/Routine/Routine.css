@@ -1,14 +1,42 @@
-.Routine.container {
-    width: 70%; 
+.Routine {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: left; /* Adjust text alignment if preferred */
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .Routine h1 {
-    text-align: center;
+    color: #333;
+    font-size: 2.8em;
+    margin-bottom: 20px;
 }
 
-.Routine ul, ol {
-    margin-left: 30px;
-} 
+.Routine h2 {
+    color: #4c51af;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.Routine p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.Routine ul,
+.Routine ol {
+    list-style: none;
+    padding: 0;
+}
+
+.Routine li {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Adjust the spacing or add other styles as needed */
