@@ -42,12 +42,7 @@ export const SidebarData = [
     icon: <FaIcons.FaHospital  color="black"/>,
     cName: 'nav-text'
   },
-  {
-    title: 'Settings',
-    path: '/Settings',
-    icon: <IoIcons.IoMdSettings  color="black"/>,
-    cName: 'nav-text'
-  },
+ 
   
  
 ];
