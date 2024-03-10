@@ -1,0 +1,15 @@
+.DrugUsage.container {
+    width: 80%; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+.DrugUsage h1, h2 {
+    text-align: center;
+}
+
+.DrugUsage ul {
+    list-style-type: disc; 
+    margin-left: 30px;
+}
