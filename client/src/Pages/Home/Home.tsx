@@ -6,23 +6,41 @@ import Reminder from "../../Components/Reminder/Reminder";
 import axios from 'axios';
 import QuestionForm from '../../Components/QuestionForm/QuestionForm';
 import ResponseDisplay from '../../Components/ResponseDisplay/ResponseDisplay';
+import BasicCalendar from "../../Components/BasicCalendar/BasicCalendar";
 
 const Home: React.FC = () => {
-
-  return (
-    <>
-      <Navbar />
-
-      <div className="Home">
-        <h1>Welcome to RxPlanation</h1>
-
+    // Sample event data
+    const eventData = [
+      {
+        start: new Date("2024-03-18T10:00:00"),
+        end: new Date("2024-03-28T11:00:00"),
+        title: "Tylenol",
+      },
+      {
+        start: new Date("2024-03-18T14:00:00"),
+        end: new Date("2025-03-18T15:30:00"),
+        title: "Metformin",
+      },
+    ];
+  
+    return (
+      <>
+        <Navbar />
+  
+        <div className="Home">
+          <h1>Welcome to RxPlanation</h1>
+          {/* Additional content here */}
+        </div>
+  
+        <Reminder />
         
-        <Reminder/>
-
-        {/* Add additional sections or links as needed */}
-      </div>
-    </>
-  );
-};
-
-export default Home;
+        <div style={{ height: "95vh" }}>
+          {/* Pass the eventData to BasicCalendar */}
+          <BasicCalendar data={eventData} />
+        </div>
+      </>
+    );
+  };
+  
+  export default Home;
+  
