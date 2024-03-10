@@ -15,7 +15,7 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
-        <div id="google_translate_element"></div>
+            <div id="google_translate_element"></div>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
@@ -24,14 +24,14 @@ function Navbar() {
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <AiIcons.AiOutlineClose color="black" />
               </Link>
             </li>
             {SidebarData.map((item: { cName: string | undefined; path: To; icon: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; }, index: React.Key | null | undefined) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
-                
+                    {item.icon}
                     <span>{item.title}</span>
                   </Link>
                   

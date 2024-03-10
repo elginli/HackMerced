@@ -23,7 +23,7 @@ export default function Home() {
       <Navbar />
 
       <div className="Home">
-        <h1>Welcome to RemindRX</h1>
+        <h1>Welcome to RxPlain</h1>
 
 
         <Reminder />

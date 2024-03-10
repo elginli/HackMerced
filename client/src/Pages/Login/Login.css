@@ -1,12 +1,47 @@
-button {
-  background-color: blue; /* Set button background color to blue */
-  color: white; /* Set text color to white */
-  padding: 10px 20px; /* Add padding to the button */
-  border: none; /* Remove default button border */
-  border-radius: 5px; /* Add border radius to create rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
+/*css for Login/Register */
+
+.Login {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(79deg, lightblue, lightblue 48%, white);
 }
 
-button:hover {
-  background-color: darkblue; /* Darken button background color on hover */
+.Login-auth-form-container, .Login-login-form, .Login-register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Login-label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+.Login-input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.Login-button {
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7439db;
+}
+
+.Login-button:hover {
+  background-color: lightblue; /* Darken button background color on hover */
+}
+
+.Login-link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
 }

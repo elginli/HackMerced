@@ -43,5 +43,10 @@ mongoose.connect("mongodb+srv://PlamCS:8xMQMo7z4t37v3LN@userdata.cezuq0i.mongodb
 }).then(() => {
     console.log('Connected to MongoDB database');
 }).catch((e) => {
+<<<<<<< HEAD
     console.log(`${e}. Did not connect to MongoDB`);
 });
+=======
+    console.log(`${e}. Did not connect`)
+})
+>>>>>>> refs/remotes/origin/main
