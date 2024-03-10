@@ -1,5 +1,8 @@
+// Reminder.tsx
+
 import React, { useState, useEffect } from 'react';
 import './Reminder.css';
+import moment from 'moment';
 
 interface ReminderItem {
   drugName: string;
@@ -12,7 +15,7 @@ interface ReminderItem {
   id: number;
 }
 
-const Reminder: React.FC = () => {
+export const Reminder: React.FC = () => {
   const [reminders, setReminders] = useState<ReminderItem[]>([]);
   const [newReminder, setNewReminder] = useState<ReminderItem>({
     drugName: '',
@@ -24,7 +27,11 @@ const Reminder: React.FC = () => {
     taken: false,
     id: 0,
   });
+
+  
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [startDate, setStartDate] = useState<string>('');
+  const [endDate, setEndDate] = useState<string>('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -61,27 +68,63 @@ const Reminder: React.FC = () => {
     return daysOfWeek[today];
   };
 
+  const [events, setEvents] = useState([
+    {
+      start: moment("2024-03-18T10:00:00").toDate(),
+      end: moment("2024-03-18T11:00:00").toDate(),
+      title: "MRI Registration",
+    },
+    {
+      start: moment("2024-03-18T14:00:00").toDate(),
+      end: moment("2024-03-18T15:30:00").toDate(),
+      title: "ENT Appointment",
+    },
+   
+  ]);
+
   const saveRemindersToConsole = (updatedReminders: ReminderItem[]) => {
-    console.log('Reminders:', JSON.stringify(updatedReminders, null, 2));
+      //console.log('Reminders:', JSON.stringify(updatedReminders, null, 2));
+    //events.push({start: moment(updatedReminders[4].toString()).toDate(), end: moment(updatedReminders[5].toString()).toDate(), title: updatedReminders[0].toString()})
   };
 
   const addReminder = () => {
-    const startDate = new Date(newReminder.startDate);
-    const endDate = new Date(newReminder.endDate);
+    const startDateValue = new Date(newReminder.startDate);
+    const endDateValue = new Date(newReminder.endDate);
 
     if (
       newReminder.drugName &&
       newReminder.dosage &&
       newReminder.times.length > 0 &&
       newReminder.days.length > 0 &&
-      startDate <= endDate
+      startDateValue <= endDateValue
     ) {
       setReminders((prevReminders) => {
-        const updatedReminders = [...prevReminders, { ...newReminder, id: Date.now() }];
+        const formattedTimes = newReminder.times.map((time) => time.trim());
+
+        const updatedReminders = [
+          ...prevReminders,
+          {
+            ...newReminder,
+            startDate: `${newReminder.startDate}T${formattedTimes[0]}:00`,
+            endDate: `${newReminder.endDate}T${formattedTimes[formattedTimes.length - 1]}:00`,
+            id: Date.now(),
+          },
+        ];
+        setEvents((prevEvents) => [
+            ...prevEvents,
+            {
+              start: moment(newReminder.startDate + 'T' + newReminder.times[0] + ':00').toDate(),
+              end: moment(newReminder.endDate + 'T' + newReminder.times[newReminder.times.length - 1] + ':00').toDate(),
+              title: newReminder.drugName,
+            },
+          ]);
+
         saveRemindersToConsole(updatedReminders);
         return updatedReminders;
       });
 
+      setStartDate('');
+      setEndDate('');
       setNewReminder({
         drugName: '',
         dosage: '',
@@ -96,6 +139,12 @@ const Reminder: React.FC = () => {
       alert('Please fill in all fields correctly before adding a reminder.');
     }
   };
+
+  useEffect(() => {
+    // Log the updated events after the component re-renders
+    console.log("Updated Events:", events);
+  }, [events]); // This ensures the useEffect runs whenever events changes
+  
 
   const handleCheckboxChange = (id: number) => {
     setReminders((prevReminders) => {
@@ -185,7 +234,10 @@ const Reminder: React.FC = () => {
               type="date"
               name="startDate"
               value={newReminder.startDate}
-              onChange={handleInputChange}
+              onChange={(e) => {
+                handleInputChange(e);
+                setStartDate(e.target.value);
+              }}
             />
           </div>
           <div>
@@ -194,7 +246,10 @@ const Reminder: React.FC = () => {
               type="date"
               name="endDate"
               value={newReminder.endDate}
-              onChange={handleInputChange}
+              onChange={(e) => {
+                handleInputChange(e);
+                setEndDate(e.target.value);
+              }}
             />
           </div>
           <button onClick={addReminder}>Add Reminder</button>
@@ -232,5 +287,6 @@ const Reminder: React.FC = () => {
     </div>
   );
 };
+
 
 export default Reminder;
