@@ -1,6 +1,6 @@
 /*css for Login/Register */
 
-.Login {
+.Login{
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -10,24 +10,25 @@
   background-image: linear-gradient(79deg, lightblue, lightblue 48%, white);
 }
 
-.Login-auth-form-container, .Login-login-form, .Login-register-form {
+.auth-form-container, .login-form, .register-form {
   display: flex;
   flex-direction: column;
 }
 
-.Login-label {
+ .Login label {
   text-align: left;
   padding: 0.25rem 0;
+  color:black;
 }
 
-.Login-input {
+ .Login input {
   margin: 0.5rem 0;
   padding: 1rem;
   border: none;
   border-radius: 10px;
 }
 
-.Login-button {
+.Login button {
   border: none;
   background-color: white;
   padding: 20px;
@@ -36,12 +37,16 @@
   color: #7439db;
 }
 
-.Login-button:hover {
+.Login button:hover {
   background-color: lightblue; /* Darken button background color on hover */
 }
 
-.Login-link-btn {
+.Login.link-btn {
   background: none;
   color: white;
   text-decoration: underline;
+}
+.z{
+  position: relative;
+  z-index: 2;
 }

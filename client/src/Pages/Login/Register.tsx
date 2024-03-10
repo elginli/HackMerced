@@ -22,6 +22,7 @@ export const Register: React.FC<RegisterProps> = (props) => {
     }
 
     return (
+        <div className="Login">
         <div className="auth-form-container">
             <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
@@ -34,6 +35,7 @@ export const Register: React.FC<RegisterProps> = (props) => {
                 <button type="submit">Register</button>
             </form>
             <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+        </div>
         </div>
     )
 }

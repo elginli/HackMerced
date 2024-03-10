@@ -19,17 +19,19 @@ export const Login: React.FC<LoginProps> = (props) => {
   }
 
   return (
-    <div className="Login-auth-form-container">
+    <div className="Login">
+    <div className="auth-form-container">
       <h2>Welcome to RxPlanation</h2>
       <h2>Login</h2>
-      <form className="Login-auth-form" onSubmit={handleSubmit}>
-        <label className="Login-label" htmlFor="email">Email</label>
-        <input className="Login-input" value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-        <label className="Login-label" htmlFor="password">Password</label>
-        <input className="Login-input" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-        <button className="Login-button" type="submit">Log In</button>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label className="" htmlFor="email">Email</label>
+        <input className="" value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+        <label className="" htmlFor="password">Password</label>
+        <input className="" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+        <button className="" type="submit">Log In</button>
       </form>
-      <button className="Login-link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+      <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+    </div>
     </div>
   )
 }
