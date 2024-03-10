@@ -8,7 +8,7 @@ import QuestionForm from '../../Components/QuestionForm/QuestionForm';
 import ResponseDisplay from '../../Components/ResponseDisplay/ResponseDisplay';
 
 const Home: React.FC = () => {
-   
+
   return (
     <>
       <Navbar />
